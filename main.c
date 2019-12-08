@@ -27,7 +27,10 @@ char const JIGSAW[MAX_POS][MAX_ROT] = {
 
 void print_solution(Piece** sol) {
     for(int i = 0; i < MAX_POS; i++) {
-        if(i>0 && !(i%MAX_WIDTH)) printf("\n");
+        if(i>0 && !(i%MAX_WIDTH)) {
+            if(i != MAX_POS - 1) {printf(",");}
+            printf("\n");
+        }
         print_piece(sol[i]);
     }
 }
@@ -140,11 +143,10 @@ int main(int argc, char* argv[]) {
 
     //Here solve(...) enters the bulk of the program.
     if(solve(solution, position, used)) {
-        printf("SOL\n");
         print_solution(solution);
         printf("\n");
     }
     else {
-        printf("SOL\nNo solution\n");
+        printf("No solution\n");
     }
 }

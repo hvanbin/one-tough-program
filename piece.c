@@ -47,7 +47,7 @@ Joint get_joint(Piece* p, Side s) {
 }
 
 void print_piece(Piece* p) {
-    printf("%s,%s,%s,%s(%d), ", joint_to_str(p->edge[0]), joint_to_str(p->edge[1]),
+    printf("%s,%s,%s,%s(%d)", joint_to_str(p->edge[0]), joint_to_str(p->edge[1]),
                joint_to_str(p->edge[2]), joint_to_str(p->edge[3]), p->rotation);
 }
 
