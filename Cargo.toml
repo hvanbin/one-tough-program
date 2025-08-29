@@ -1,0 +1,17 @@
+[package]
+name = "jigsaw-solver"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust solver for 'One Tough Puzzle' - a 3x3 jigsaw puzzle with tabs and slots"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/hvanbin/one-tough-program"
+
+[lib]
+name = "jigsaw_solver"
+path = "src/lib.rs"
+
+[[bin]]
+name = "jigsaw-solver"
+path = "src/main.rs"
+
+[dependencies]
